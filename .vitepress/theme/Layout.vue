@@ -7,12 +7,13 @@ import Home from '../pages/Home.vue';
 </script>
 
 <template>
-  
-  <P404 v-if="page.isNotFound"/>
-  <Navbar v-else />
 
-  <Home v-if="frontmatter.layout === 'home'"/>
-  <div class="max-w-xl mx-auto" v-else>
-    <Content class="px-4 markdown-body"/>
+  <P404 v-if="page.isNotFound" />
+  <div v-else class="flex h-full">
+    <Navbar class="h-full flex-0" />
+    <Home v-if="frontmatter.layout === 'home'" />
+    <div class="mx-auto max-w-xl" v-else>
+      <Content class="px-4 markdown-body" />
+    </div>
   </div>
 </template>

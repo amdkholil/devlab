@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.vertical-text {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);  
+
+html, body, #app {
+  min-height: 100hv;
+  height: 100%;
 }
 
 
